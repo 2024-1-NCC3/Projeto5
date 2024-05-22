@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Edit_Text">
+        <item name="android:background">@drawable/edit_text</item>
+    </style>
+    <style name="FundoDeck">
+        <item name="android:background">@drawable/fundnewdeck</item>
+    </style>
+</resources>

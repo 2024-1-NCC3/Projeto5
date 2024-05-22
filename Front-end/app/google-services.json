@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994856564534",
+    "project_id": "jglb-d4b47",
+    "storage_bucket": "jglb-d4b47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994856564534:android:2b5f003724430450c22597",
+        "android_client_info": {
+          "package_name": "com.example.trabalhofacul"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIrlBnkZ8iPdYL4V-d8S6VA5_3i6fSvwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
