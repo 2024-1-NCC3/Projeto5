@@ -25,7 +25,7 @@ import java.util.Map;
 public class CadastroPage extends AppCompatActivity {
 
     Usuario usuario;
-//    FirebaseAuth autenticacao;
+
     EditText campoNome, campoEmail, campoSenha;
     Button btnCadastrar;
     @Override

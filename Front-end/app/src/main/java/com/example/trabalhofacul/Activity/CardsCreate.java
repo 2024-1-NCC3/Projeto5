@@ -42,7 +42,7 @@ public class CardsCreate extends AppCompatActivity {
         inicializarComponentes();
         getSupportActionBar().hide();
 
-        // Inicializa o SessionManager
+
         sessionManager = new SessionManager(getApplicationContext());
 
         ImageView btvoltar = findViewById(R.id.seta);
@@ -98,7 +98,7 @@ public class CardsCreate extends AppCompatActivity {
             return;
         }
 
-        String url = "https://kkg944-3000.csb.app/cards"; // Substitua pela URL do seu servidor
+        String url = "https://kkg944-3000.csb.app/cards";
         JSONObject requestBody = new JSONObject();
         try {
             requestBody.put("titulo", titulo);
@@ -117,7 +117,7 @@ public class CardsCreate extends AppCompatActivity {
                             boolean success = response.getBoolean("success");
                             if (success) {
                                 Toast.makeText(CardsCreate.this, "Card criado com sucesso", Toast.LENGTH_SHORT).show();
-                                // Redirecionar para a tela inicial ou atualizar a lista de cards
+
                                 Intent intent = new Intent(CardsCreate.this, InicialPage.class);
                                 startActivity(intent);
                                 finish();

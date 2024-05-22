@@ -78,7 +78,7 @@ public class CardDetailActivity extends AppCompatActivity {
     }
 
     private void deleteCard() {
-        String url = "https://kkg944-3000.csb.app/cards/" + cardId; // Substitua pela URL do seu servidor
+        String url = "https://kkg944-3000.csb.app/cards/" + cardId;
 
         StringRequest stringRequest = new StringRequest(Request.Method.DELETE, url,
                 new Response.Listener<String>() {

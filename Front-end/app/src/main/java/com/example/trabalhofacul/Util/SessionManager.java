@@ -3,6 +3,8 @@ package com.example.trabalhofacul.Util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.auth0.android.jwt.JWT;
+
 import java.util.Calendar;
 
 public class SessionManager {
@@ -46,8 +48,8 @@ public class SessionManager {
         long loginTime = pref.getLong(KEY_LOGIN_TIME, 0);
         long currentTime = Calendar.getInstance().getTimeInMillis();
         long elapsedTime = currentTime - loginTime;
-        // Define o tempo de expiração da sessão (5 minutos neste exemplo)
-        long sessionDuration = 60 * 60 * 1000; // 5 minutos em milissegundos
+        // Define o tempo de expiração da sessão
+        long sessionDuration = 1440 * 60 * 1000; // 24 horas em milissegundos
 
         // Verifica se o tempo decorrido desde o login é maior do que a duração da sessão
         return elapsedTime > sessionDuration;
@@ -57,6 +59,14 @@ public class SessionManager {
         editor.remove(KEY_TOKEN);
         editor.remove(KEY_LOGIN_TIME);
         editor.apply();
+    }
+    public int getUserId() {
+        String token = getToken();
+        if (token != null) {
+            JWT jwt = new JWT(token);
+            return jwt.getClaim("id").asInt();
+        }
+        return -1;
     }
 
     public void logout() {

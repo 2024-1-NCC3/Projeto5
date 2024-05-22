@@ -156,7 +156,7 @@ public class InicialPage extends AppCompatActivity {
             String token = sessionManager.getToken();
 
             if (token != null && !token.isEmpty()) {
-                String url = "https://kkg944-3000.csb.app/getcard"; // Substitua pela URL do seu servidor
+                String url = "https://kkg944-3000.csb.app/getcard";
 
                 JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                         new Response.Listener<JSONArray>() {
@@ -215,13 +215,13 @@ public class InicialPage extends AppCompatActivity {
     private void animateButtonFadeIn() {
         btnEdit.setVisibility(View.VISIBLE);
         AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
-        fadeIn.setDuration(500); // duração da animação em milissegundos
+        fadeIn.setDuration(500);
         btnEdit.startAnimation(fadeIn);
     }
 
     private void animateButtonFadeOut() {
         AlphaAnimation fadeOut = new AlphaAnimation(1.0f, 0.0f);
-        fadeOut.setDuration(500); // duração da animação em milissegundos
+        fadeOut.setDuration(500);
         fadeOut.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -238,10 +238,4 @@ public class InicialPage extends AppCompatActivity {
     }
 
 
-    public void deslogar(View view) {
-        sessionManager.logout();
-        Intent i = new Intent(InicialPage.this, LoginPage.class);
-        startActivity(i);
-        finish();
-    }
 }
