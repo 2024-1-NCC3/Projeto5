@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -64,7 +65,7 @@ public class InicialPage extends AppCompatActivity {
 
         btnEdit.setVisibility(View.INVISIBLE);
 
-        RelativeLayout mainLayout = findViewById(R.id.mainLayout);
+        ConstraintLayout mainLayout = findViewById(R.id.mainLayout);
         mainLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
