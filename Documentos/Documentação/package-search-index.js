@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.example.trabalhofacul"},{"l":"com.example.trabalhofacul.Activity"},{"l":"com.example.trabalhofacul.model"},{"l":"com.example.trabalhofacul.Util"}]
